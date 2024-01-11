@@ -1,4 +1,4 @@
-const VideoService = require("../services/videoservice");
+const VideoService = require("../services/videoService");
 const { createResponse, createError } = require("../utiils/helper");
 
 class VideoController {
