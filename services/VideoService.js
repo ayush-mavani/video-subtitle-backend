@@ -65,6 +65,7 @@ class VideoService {
   async getAllVideos(req) {
     try {
       const allVideo = await Video.find().exec();
+      console.log("allVideo::: ", allVideo);
       return allVideo;
     } catch (err) {
       return null;
