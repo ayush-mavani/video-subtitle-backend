@@ -16,17 +16,5 @@
             "src": "./public",
             "dest": "./index.js"
         }
-    ],
-    "rewrites": [
-        {
-            "source": "/:path*",
-            "destination": "/",
-            "has": [
-                {
-                    "type": "path",
-                    "value": "/public/(.*)"
-                }
-            ]
-        }
     ]
 }
