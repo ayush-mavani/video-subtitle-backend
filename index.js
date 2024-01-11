@@ -13,9 +13,9 @@ require("./config/dbConnection");
 app.use(cors());
 app.use(express.json());
 // app.use("./public/uploads/", express.static(path.join(__dirname, "public")));
-app.use(express.urlencoded({ extended: true }));
-app.use("/public", express.static("public"));
-// global.appRoot = path.resolve(__dirname);
+// app.use(express.urlencoded({ extended: true }));
+// app.use("/public", express.static("public"));
+app.use(express.static(path.resolve("./public")));
 
 // API Health check
 app.all("/api/health-check", (req, res) =>

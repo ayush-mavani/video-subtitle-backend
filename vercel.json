@@ -7,6 +7,12 @@
             "use": "@vercel/node"
         }
     ],
+    "rewrites": [
+        {
+            "source": "/public/:path*",
+            "destination": "/:path*"
+        }
+    ],
     "routes": [
         {
             "src": "/(.*)",
