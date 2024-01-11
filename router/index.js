@@ -1,4 +1,4 @@
-const videoRoutes = require("../components/videoRoute");
+const videoRoutes = require("../components/video.route");
 /**
  * Init All routes here
  */

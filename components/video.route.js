@@ -1,6 +1,6 @@
 const express = require("express");
 const Upload = require("../utiils/multer");
-const videoController = require("./videoController");
+const videoController = require("./video.controller");
 const router = express.Router();
 /**
  * @route POST api/uploadVideo
