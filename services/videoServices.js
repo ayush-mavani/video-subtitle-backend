@@ -1,7 +1,7 @@
 const Video = require("../model/Video");
 const { v4: uuidv4 } = require("uuid");
 const fs = require("fs");
-class VideoService {
+class VideoServices {
   /**
    * @description uploadVideo
    * @param {Object} obj
@@ -94,5 +94,5 @@ class VideoService {
     }
   }
 }
-const videoService = new VideoService();
-module.exports = videoService;
+const videoServices = new VideoServices();
+module.exports = videoServices;

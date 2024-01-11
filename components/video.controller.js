@@ -1,4 +1,4 @@
-const VideoService = require("../services/videoService");
+const videoServices = require("../services/videoServices");
 const { createResponse, createError } = require("../utiils/helper");
 
 class VideoController {
@@ -7,7 +7,7 @@ class VideoController {
    */
   async uploadVideo(req, res) {
     try {
-      const isValid = await VideoService.uploadVideo(req);
+      const isValid = await videoServices.uploadVideo(req);
       if (isValid) {
         createResponse(res, true, "upload successfully ...", isValid);
       } else {
@@ -22,7 +22,7 @@ class VideoController {
    */
   async addSubtitles(req, res) {
     try {
-      const isValid = await VideoService.addSubtitles(req);
+      const isValid = await videoServices.addSubtitles(req);
       if (isValid) {
         createResponse(res, true, "Add successfully ...", isValid);
       } else {
@@ -37,7 +37,7 @@ class VideoController {
    */
   async getAllVideos(req, res) {
     try {
-      const isValid = await VideoService.getAllVideos(req);
+      const isValid = await videoServices.getAllVideos(req);
       if (isValid) {
         createResponse(res, true, "Get successfully ...", isValid);
       } else {
@@ -52,7 +52,7 @@ class VideoController {
    */
   async deleteVideo(req, res) {
     try {
-      const isValid = await VideoService.deleteVideo(req);
+      const isValid = await videoServices.deleteVideo(req);
       if (isValid) {
         createResponse(res, true, "Delete successfully ...", isValid);
       } else {
