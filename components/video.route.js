@@ -1,6 +1,6 @@
 const express = require("express");
 const Upload = require("../utiils/multer");
-const VideoController = require("./videoController");
+const videoController = require("./videoController");
 const router = express.Router();
 /**
  * @route POST api/uploadVideo
@@ -9,7 +9,7 @@ const router = express.Router();
  * @access public
  */
 router.post("/uploadVideo", Upload.single("file"), (req, res) => {
-  VideoController.uploadVideo(req, res);
+  videoController.uploadVideo(req, res);
 });
 
 /**
@@ -19,7 +19,7 @@ router.post("/uploadVideo", Upload.single("file"), (req, res) => {
  * @access public
  */
 router.post("/addSubtitles", (req, res) => {
-  VideoController.addSubtitles(req, res);
+  videoController.addSubtitles(req, res);
 });
 
 /**
@@ -30,7 +30,7 @@ router.post("/addSubtitles", (req, res) => {
  */
 
 router.get("/getAllVideos", (req, res) => {
-  VideoController.getAllVideos(req, res);
+  videoController.getAllVideos(req, res);
 });
 
 /**
@@ -41,7 +41,7 @@ router.get("/getAllVideos", (req, res) => {
  */
 
 router.post("/delete-video/:id", (req, res) => {
-  VideoController.deleteVideo(req, res);
+  videoController.deleteVideo(req, res);
 });
 
 module.exports = router;

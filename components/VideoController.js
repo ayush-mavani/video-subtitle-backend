@@ -1,7 +1,7 @@
 const VideoService = require("../services/videoservice");
 const { createResponse, createError } = require("../utiils/helper");
 
-class VideoController {
+class videoController {
   /**
    * @description signup new user
    */
@@ -64,5 +64,4 @@ class VideoController {
   }
 }
 
-const videoController = new VideoController();
-module.exports = videoController;
+module.exports = new videoController();
