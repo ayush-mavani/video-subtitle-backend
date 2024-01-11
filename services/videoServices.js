@@ -12,7 +12,7 @@ class VideoServices {
     const newVideo = new Video({
       videoId: uuidv4(),
       path: file.path,
-      videoUrl: `http://localhost:5500/${file.path}`,
+      videoUrl: `${process.env.LIVE_URL}/${file.path}`,
       videoName: file.originalname,
       subtitles: [],
     });
