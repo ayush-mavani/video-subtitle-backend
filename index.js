@@ -12,9 +12,7 @@ require("./config/dbConnection");
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(__dirname + "/tmp"));
-app.use("./tmp", express.static("tmp"));
-// app.use("./public", express.static(path.join(__dirname, "public")));
+app.use("./public", express.static(path.join(__dirname, "public")));
 // global.appRoot = path.resolve(__dirname);
 
 // API Health check

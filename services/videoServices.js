@@ -1,13 +1,16 @@
 const Video = require("../model/Video");
 const { v4: uuidv4 } = require("uuid");
 const fs = require("fs");
+
 class VideoServices {
   /**
    * @description uploadVideo
    * @param {Object} obj
    */
-  uploadVideo(req) {
+  async uploadVideo(req) {
     const { file } = req;
+    console.log("req::: ", req.body);
+    console.log("file::: ", file);
 
     const newVideo = new Video({
       videoId: uuidv4(),
